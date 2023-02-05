@@ -1,10 +1,12 @@
 package app.model;
 
-public class Timer {
+import org.springframework.stereotype.Component;
 
-    private Long nanoTime = System.nanoTime();
+@Component
+public class Timer {
+    private static final Long NANO_TIME = System.nanoTime();
 
     public Long getTime() {
-        return nanoTime;
+        return NANO_TIME;
     }
 }
